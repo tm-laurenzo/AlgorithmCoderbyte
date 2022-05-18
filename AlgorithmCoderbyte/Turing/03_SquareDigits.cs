@@ -22,7 +22,7 @@ namespace squaredSum
          */
 
 
-        static void Main(string[] args)
+        static void Main3(string[] args)
         {
             Console.WriteLine(SquareDigits(439));
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmCoderbyte.Brackets_and_Parentheses;
+using System;
 
 namespace AlgorithmCoderbyte
 {
@@ -7,8 +8,9 @@ namespace AlgorithmCoderbyte
         static void Main(string[] args)
         {
             //LongestWord.Run();
-            BracketCombination.Run();
+            //BracketCombination.Run();
             //RecursionFactorial.Run();
+            ValidParentheses.Run();
         }
     }
 }

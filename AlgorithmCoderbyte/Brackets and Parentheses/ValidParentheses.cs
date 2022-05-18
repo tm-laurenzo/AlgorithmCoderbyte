@@ -9,7 +9,14 @@ namespace AlgorithmCoderbyte.Brackets_and_Parentheses
     public static class ValidParentheses
     {
 
-          /*     Given a string s containing just the characters 
+          /*    
+            APPROACH
+
+            There will always be a pair of nested brackets, so removing the most inner pair,
+            then move to the next outer pair, until you finish all pairs.
+          */
+        static string question =
+            @"Given a string s containing just the characters 
                 '(', ')', '{', '}', '[' and ']', 
                  determine if the input string is valid.
 
@@ -21,24 +28,22 @@ namespace AlgorithmCoderbyte.Brackets_and_Parentheses
 
                 Example 1:
 
-                Input: s = "()"
+                Input: s = ()
                 Output: true
                 Example 2:
 
-                Input: s = "()[]{}"
+                Input: s = ()[]{}
                 Output: true
                 Example 3:
 
-                Input: s = "(]"
+                Input: s = (]
                 Output: false
 
 
                 Constraints:
 
                 1 <= s.length <= 104
-                s consists of parentheses only '()[]{}'.
-        */
-        static string question = " ";
+                s consists of parentheses only ()[]{}. ";
 
 
         public static bool Valid(String s)
@@ -57,6 +62,8 @@ namespace AlgorithmCoderbyte.Brackets_and_Parentheses
 
         public static void Run()
         {
+            Console.WriteLine("ValidParentheses Algorithm Running");
+            Console.WriteLine(question);
             Console.WriteLine(Valid(Console.ReadLine()));
         }
     }
