@@ -1,0 +1,58 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+namespace AlgorithmTestGround
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var cards = new ArrayList() { "Jack", 8, 2, 6, "King", 5, 3, "Queen" };
+            //(1)Extract the digits to a List
+            //
+            //(2)Sort the List of the Extracted digits
+            //(3)Extract the strings to a List
+            //(4)Sort the List of the Extracted strings
+            //(5)Add the List of digits to an Array List
+            //(6)Add the List of strings to the Array List in which the numbers has already been added.
+            List<int> numbers = new List<int>();
+            List<string> strings = new List<string>();
+            foreach (var item in cards)
+            {
+                if (item.GetType() == typeof(string))
+                {
+                    strings.Add((string)item);
+                }
+                else if (item.GetType() == typeof(int))
+                {
+                    numbers.Add((int)item);
+                }
+            }
+            List<string> NonNumbercards = new List<string>() { "Jack", "Queen", "King", "Ace" };
+
+
+
+
+
+
+            numbers.Sort();
+            strings = NonNumbercards.Intersect(strings).ToList();
+            ArrayList answers = new ArrayList();
+            answers.AddRange(numbers);
+            answers.AddRange(strings);
+            foreach (var item in answers)
+            {
+                if (item.GetType() == typeof(string))
+                {
+                    Console.WriteLine((string)item);
+                }
+                else if (item.GetType() == typeof(int))
+                {
+                    Console.WriteLine((int)item);
+                }
+            }
+        }
+    }
+}

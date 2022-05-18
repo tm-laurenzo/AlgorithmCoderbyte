@@ -1,0 +1,35 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Card_Deck_Algorithm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            List<Object> suppliedCards = new List<Object> { 1, "jack",  2, "king", 3, 4, 5,  "queen" };
+            List<string> suppliedCardsToString = new List<string>();
+            List<string> standardDeckOfCards = new List<string> { "2", "3", "4", "5",
+                "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"};
+
+
+            //Convert each of the inputs in supplied cards to string
+            foreach (var item in suppliedCards)
+            {
+                suppliedCardsToString.Add(item + "");
+            }
+            //Get the List of items in the standard card deck that are in the supplied cards
+            var solution = standardDeckOfCards.Intersect(suppliedCardsToString);
+
+            foreach (var item in solution)
+            {
+                Console.WriteLine(item);
+            }
+
+
+        }
+    }
+}

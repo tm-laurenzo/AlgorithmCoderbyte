@@ -1,0 +1,30 @@
+ HackerRank PlusMins Algorithm
+
+static void plusMinus(List<int> arr)
+{
+    int countOfGreaterThanZero = 0;
+    int countOfLessThanZero = 0;
+    int countOfZero = 0;
+
+    foreach (int number in arr)
+    {
+        if (number > 0)
+        {
+            countOfGreaterThanZero++;
+        }
+        else if (number < 0)
+        {
+            countOfLessThanZero++;
+        }
+        else
+        {
+            countOfZero++;
+        }
+
+        
+    }
+// convert to double first
+    Console.WriteLine(((double)countOfGreaterThanZero / arr.Count()).ToString("0.000000"));
+    Console.WriteLine(((double)countOfLessThanZero / arr.Count()).ToString("0.000000"));
+    Console.WriteLine(((double)countOfZero / arr.Count()).ToString("0.000000"));
+}

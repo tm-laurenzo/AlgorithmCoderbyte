@@ -1,0 +1,29 @@
+using System;
+
+the outer loop is the start point
+the inner loop is the end point
+the size of the area is determined by the smaller length
+
+
+
+
+
+
+public class Solution {
+    public int MaxArea(int[] height) {
+              int max = 0;
+
+            for (int i = 0; i < height.Length; i++)
+            {
+                for (int x = i + 1; x < height.Length ; x++)
+                {
+                    int minHeight = (height[i] < height[x]) ? height[i] : height[x];
+                    int currentArea = minHeight * (x - i);
+
+                    max = (max < currentArea) ? currentArea : max;
+                }
+            }
+
+            return max;
+        }
+}

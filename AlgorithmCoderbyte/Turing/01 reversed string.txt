@@ -1,0 +1,73 @@
+
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace TuringAlgorithms
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+           /*Given a string S, return the "reversed" string where all characters that are
+            not letter stay in the same place, and all letters reverse their positions
+
+            Example 1;
+            Input: "ab-cd"
+            Output: "dc-ba"
+
+            Example 2:
+            Input: "a-bC-dEf=ghlj!!"
+            Output: "j-lh-gfE=dCba!!"
+
+            */
+            Console.WriteLine(Reverse("ab-cd"));
+            Console.WriteLine(Reverse("a-bC-dEf=ghlj!!"));
+            
+
+            
+        }
+    
+
+
+
+
+
+        public static string Reverse(string input)
+        {
+        
+         //01 extract all letter from the string into a new string
+         //02 reverse the extracted letters
+         //03 using two index markers i for the input string, x for the reversed string
+         //04 create an empty string e.g. reversedString
+         //05 loop over the input string
+         //06 if current index of the input string is a letter add a character sequentially
+         // from the reversed string to the string "reversedString" and increase the index of
+         //  x the marker for the reversed string.
+         // Else if the current index of the input string is a non-letter, add the non-letter
+         // to "reversedString"
+           
+            string reversedString = "";
+
+            var lettersOnly = input.Where(x => char.IsLetter(x));
+            var reversedLettersOnly = lettersOnly.Reverse();
+             
+
+            for(int i = 0, x = 0; i < input.Length; i++)
+            {
+                if (char.IsLetter(input[i]))
+                {
+                    reversedString += reversedLettersOnly.ElementAt(x);
+                    x++;
+                   
+                }
+                else { reversedString += input.ElementAt(i); }
+            }
+
+
+            return reversedString;
+        }
+   }
+}
