@@ -62,7 +62,7 @@ namespace AlgorithmCoderbyte.Brackets_and_Parentheses
 
         public static void Run()
         {
-            Console.WriteLine("ValidParentheses Algorithm Running");
+            Console.WriteLine("ValidParentheses Algorithm Running \n");
             Console.WriteLine(question);
             Console.WriteLine(Valid(Console.ReadLine()));
         }
