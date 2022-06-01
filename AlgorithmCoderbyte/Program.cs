@@ -1,4 +1,5 @@
 ﻿using AlgorithmCoderbyte.Brackets_and_Parentheses;
+using AlgorithmCoderbyte.LeetCode;
 using System;
 
 namespace AlgorithmCoderbyte
@@ -10,7 +11,8 @@ namespace AlgorithmCoderbyte
             //LongestWord.Run();
             //BracketCombination.Run();
             //RecursionFactorial.Run();
-            ValidParentheses.Run();
+            //ValidParentheses.Run();
+            _01RotateArray.Run();
         }
     }
 }
