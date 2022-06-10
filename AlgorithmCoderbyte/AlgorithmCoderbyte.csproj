@@ -6,8 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Turing\08 Longest substring.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Brackets and Parentheses\JavaScript version\" />
     <Folder Include="Brackets and Parentheses\TypeScript version\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Turing\08 Longest substring.cs" />
   </ItemGroup>
 
 </Project>
