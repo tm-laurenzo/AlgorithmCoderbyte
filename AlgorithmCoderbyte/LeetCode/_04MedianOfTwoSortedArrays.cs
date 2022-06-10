@@ -19,7 +19,7 @@ namespace AlgorithmCoderbyte.LeetCode
             {
                 int firstMiddleIndex = fullArray.Count / 2 - 1;
                 int secondMiddleIndex = fullArray.Count / 2;
-                var firstMiddleItem = fullArray.ElementAt(firstMiddleIndex);
+                var firstMiddleItem =  fullArray.ElementAt(firstMiddleIndex);
                 var secondMiddleItem = fullArray.ElementAt(secondMiddleIndex);
 
 
