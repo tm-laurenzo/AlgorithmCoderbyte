@@ -22,7 +22,7 @@ namespace AlgorithmCoderbyte.LeetCode
 
             }
 
-            return "goat";
+            return listOfPalindromeSubstrings.OrderByDescending(x => x.Length).FirstOrDefault();
         }
     }
 }
