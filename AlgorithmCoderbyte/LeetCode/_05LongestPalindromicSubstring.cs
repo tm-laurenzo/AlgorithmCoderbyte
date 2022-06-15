@@ -8,18 +8,18 @@ namespace AlgorithmCoderbyte.LeetCode
 {
     public static class _05LongestPalindromicSubstring
     {
-        public static string LongestPalindrome(string s)
+        public static string LongestPalindrome(string input)
         {
-            var listOfSubstrings = new List<string>();
-            for(int firstPointer = 0; firstPointer < s.Length; firstPointer++)
+            var workingString = input.ToLower();
+            var listOfPalindromeSubstrings = new List<string>();
+            for(int firstPointer = 0; firstPointer < workingString.Length; firstPointer++)
             {
-
-
-
-                for(int secondPointer = firstPointer + 1; secondPointer < s.Length; secondPointer++)
+                var currentSubString = workingString.Substring(firstPointer);
+                if (currentSubString.SequenceEqual(currentSubString.Reverse()))
                 {
-
+                    listOfPalindromeSubstrings.Add(currentSubString);
                 }
+
             }
 
             return "goat";
