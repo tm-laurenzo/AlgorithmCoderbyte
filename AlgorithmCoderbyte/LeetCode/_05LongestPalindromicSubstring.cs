@@ -20,7 +20,7 @@ namespace AlgorithmCoderbyte.LeetCode
                 for(int secondPointer = firstPointer + 1; secondPointer < workingString.Length; secondPointer++)
                 {
                     //var currentSubString = workingString.Substring(firstPointer, secondPointer - firstPointer + 1);
-                    var currentSubString = (secondPointer == workingString.Length - 1) ? workingString.Substring(firstPointer,  secondPointer - firstPointer + 1) :
+                    var currentSubString = (secondPointer == workingString.Length - 1) ? workingString.Substring(firstPointer, secondPointer - firstPointer + 1) :
                         workingString.Substring(firstPointer, secondPointer -  firstPointer);
                     if (currentSubString.SequenceEqual(currentSubString.Reverse()))
                     {
