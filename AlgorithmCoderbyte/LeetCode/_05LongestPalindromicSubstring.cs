@@ -34,6 +34,36 @@ namespace AlgorithmCoderbyte.LeetCode
             return listOfPalindromeSubstrings.OrderByDescending(x => x.Length).FirstOrDefault();
         }
 
+
+        public static String LongestPalindrome1(String s)
+        {
+            int maxPalinLength = 0;
+            String longestPalindrome = null;
+            int length = s.Length;
+            // check all possible sub strings
+            for (int i = 0; i < length; i++)
+            {
+                for (int j = i + 1; j < length; j++)
+                {
+                    int len = j - i;
+                    String curr = s.Substring(i, j + 1);
+                    if (curr.SequenceEqual(curr.Reverse()))
+                    {
+                        if (len > maxPalinLength)
+                        {
+                            longestPalindrome = curr;
+                            maxPalinLength = len;
+                        }
+                    }
+                }
+            }
+            return longestPalindrome;
+        }
+       
+
+
+
+
         public static void Run()
         {
 
@@ -41,7 +71,8 @@ namespace AlgorithmCoderbyte.LeetCode
             //Console.WriteLine(LongestPalindrome("babad"));
             //Console.WriteLine(LongestPalindrome("abb"));
             //Console.WriteLine(LongestPalindrome("cbbd"));
-            Console.WriteLine(LongestPalindrome("ac"));
+            Console.WriteLine(LongestPalindrome1("ac"));
+            Console.WriteLine(LongestPalindrome1("abcda"));
 
         }
     }

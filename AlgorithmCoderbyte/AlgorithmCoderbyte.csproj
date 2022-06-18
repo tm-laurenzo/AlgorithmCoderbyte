@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Turing\08 Longest substring.cs" />
+    <Compile Remove="Turing\08 Longest Substring.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Turing\08 Longest substring.cs" />
+    <None Include="Turing\08 Longest Substring.cs" />
   </ItemGroup>
 
 </Project>

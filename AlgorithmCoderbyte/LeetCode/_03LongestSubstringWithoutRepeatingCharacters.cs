@@ -40,11 +40,11 @@ namespace AlgorithmCoderbyte.LeetCode
             }
 
             string longestSubstring = "";
-            foreach (var substring in listOfUniqueSubstrings)
+            foreach (var Substring in listOfUniqueSubstrings)
             {
-                if(substring.Length > longestSubstring.Length)
+                if(Substring.Length > longestSubstring.Length)
                 {
-                    longestSubstring = substring;
+                    longestSubstring = Substring;
                 }
             }
 
