@@ -34,7 +34,7 @@ namespace AlgorithmCoderbyte.LeetCode
             //    Console.WriteLine(item);
             //}
             Console.WriteLine("answer");
-            return listOfPalindromeSubstrings.OrderByDescending(x => x.Length).FirstOrDefault();
+            return listOfPalindromeSubstrings.OrderByDescending(x => x.Length). FirstOrDefault();
         }
 
 
