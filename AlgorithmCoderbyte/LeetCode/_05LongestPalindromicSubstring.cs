@@ -10,18 +10,17 @@ namespace AlgorithmCoderbyte.LeetCode
     {
         public static string LongestPalindrome(string input)
         {
-
+            //if ("a".SequenceEqual("a".Reverse())) Console.WriteLine("sequence equal works for single digit");
            
             var workingString = input.ToLower();
             var listOfPalindromeSubstrings = new List<string>();
             for(int firstPointer = 0; firstPointer < workingString.Length; firstPointer++)
             {
 
-                for(int secondPointer = firstPointer + 1; secondPointer < workingString.Length; secondPointer++)
+                for(int secondPointer = firstPointer; secondPointer < workingString.Length; secondPointer++)
                 {
                     //var currentSubString = workingString.Substring(firstPointer, secondPointer - firstPointer + 1);
-                    var currentSubString = (secondPointer == workingString.Length - 1) ? workingString.Substring(firstPointer, secondPointer - firstPointer + 1) :
-                        workingString.Substring(firstPointer, secondPointer -  firstPointer);
+                    var currentSubString = workingString.Substring(firstPointer, secondPointer -  firstPointer + 1);
                     if (currentSubString.SequenceEqual(currentSubString.Reverse()))
                     {
                         listOfPalindromeSubstrings.Add(currentSubString);
@@ -30,35 +29,15 @@ namespace AlgorithmCoderbyte.LeetCode
                 
 
             }
-
+            //foreach (var item in listOfPalindromeSubstrings)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine("answer");
             return listOfPalindromeSubstrings.OrderByDescending(x => x.Length).FirstOrDefault();
         }
 
 
-        public static String LongestPalindrome1(String s)
-        {
-            int maxPalinLength = 0;
-            String longestPalindrome = null;
-            int length = s.Length;
-            // check all possible sub strings
-            for (int i = 0; i < length; i++)
-            {
-                for (int j = i + 1; j < length; j++)
-                {
-                    int len = j - i;
-                    String curr = s.Substring(i, j + 1);
-                    if (curr.SequenceEqual(curr.Reverse()))
-                    {
-                        if (len > maxPalinLength)
-                        {
-                            longestPalindrome = curr;
-                            maxPalinLength = len;
-                        }
-                    }
-                }
-            }
-            return longestPalindrome;
-        }
        
 
 
@@ -71,8 +50,8 @@ namespace AlgorithmCoderbyte.LeetCode
             //Console.WriteLine(LongestPalindrome("babad"));
             //Console.WriteLine(LongestPalindrome("abb"));
             //Console.WriteLine(LongestPalindrome("cbbd"));
-            Console.WriteLine(LongestPalindrome1("ac"));
-            Console.WriteLine(LongestPalindrome1("abcda"));
+            //Console.WriteLine(LongestPalindrome("ac"));
+            Console.WriteLine(LongestPalindrome("abcda"));
 
         }
     }
