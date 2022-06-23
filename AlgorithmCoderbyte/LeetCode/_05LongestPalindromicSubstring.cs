@@ -53,6 +53,7 @@ namespace AlgorithmCoderbyte.LeetCode
 
         private static int expandAroundCenter(String s, int left, int right)
         {
+
             int L = left, R = right;
             while (L >= 0 && R < s.Length && s.[L] == s.[R])
             {
