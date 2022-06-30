@@ -55,7 +55,7 @@ namespace AlgorithmCoderbyte.LeetCode
         {
             int L = left, R = right;
 
-            while (L >= 0 && R < s.Length && s.[L] == s.[R])
+            while (L >= 0 && R < s.Length && s[L] == s[R])
             {
                 L--;
                 R++;
