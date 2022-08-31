@@ -23,6 +23,7 @@ namespace AlgorithmCoderbyte.LeetCode
                     if (currentSubString.SequenceEqual(currentSubString.Reverse()))
                     {
                         listOfPalindromeSubstrings.Add(currentSubString);
+
                     }
                 }
                 
