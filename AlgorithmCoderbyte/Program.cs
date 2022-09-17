@@ -1,6 +1,7 @@
 ﻿using AlgorithmCoderbyte.Brackets_and_Parentheses;
 using AlgorithmCoderbyte.LeetCode;
 using System;
+using AlgorithmCoderbyte.LeetCode_C_sharp;
 
 namespace AlgorithmCoderbyte
 {
@@ -15,7 +16,9 @@ namespace AlgorithmCoderbyte
             //_01RotateArray.Run();
             //_03LongestSubstringWithoutRepeatingCharacters.Run();
             //_04MedianOfTwoSortedArrays.Run();
-            _05LongestPalindromicSubstring.Run();
+            //_05LongestPalindromicSubstring.Run();
+            _06ZigZagConversion.Run();
+
         }
     }
 }

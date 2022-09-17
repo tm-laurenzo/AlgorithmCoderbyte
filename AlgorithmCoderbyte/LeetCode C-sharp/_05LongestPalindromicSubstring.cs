@@ -4,34 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmCoderbyte.LeetCode
+namespace AlgorithmCoderbyte.LeetCode_C_sharp
 {
     public static class _05LongestPalindromicSubstring
     {
         public static string LongestPalindromeBruteForce(string input)
         {
-           
+
             var workingString = input.ToLower();
             var listOfPalindromeSubstrings = new List<string>();
-            for(int firstPointer = 0; firstPointer < workingString.Length; firstPointer++)
+            for (int firstPointer = 0; firstPointer < workingString.Length; firstPointer++)
             {
 
-                for(int secondPointer = firstPointer; secondPointer < workingString.Length; secondPointer++)
+                for (int secondPointer = firstPointer; secondPointer < workingString.Length; secondPointer++)
                 {
-                   
-                    var currentSubString = workingString.Substring(firstPointer, secondPointer -  firstPointer + 1);
+
+                    var currentSubString = workingString.Substring(firstPointer, secondPointer - firstPointer + 1);
                     if (currentSubString.SequenceEqual(currentSubString.Reverse()))
                     {
                         listOfPalindromeSubstrings.Add(currentSubString);
 
                     }
                 }
-                
+
 
             }
-         
+
             Console.WriteLine("answer");
-            return listOfPalindromeSubstrings.OrderByDescending(x => x.Length). FirstOrDefault();
+            return listOfPalindromeSubstrings.OrderByDescending(x => x.Length).FirstOrDefault();
         }
 
         public static String longestPalindromeExpandAroundTheCorner(String s)
