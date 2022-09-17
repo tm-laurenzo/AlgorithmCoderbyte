@@ -8,7 +8,7 @@ namespace AlgorithmCoderbyte.LeetCode
 {
     public static class _05LongestPalindromicSubstring
     {
-        public static string LongestPalindrome(string input)
+        public static string LongestPalindromeBruteForce(string input)
         {
            
             var workingString = input.ToLower();
@@ -34,7 +34,7 @@ namespace AlgorithmCoderbyte.LeetCode
             return listOfPalindromeSubstrings.OrderByDescending(x => x.Length). FirstOrDefault();
         }
 
-        public static String longestPalindrome_ExpandAroundTheCorner(String s)
+        public static String longestPalindromeExpandAroundTheCorner(String s)
         {
             if (s == null || s.Length < 1) return "";
             int start = 0, end = 0;
@@ -45,15 +45,16 @@ namespace AlgorithmCoderbyte.LeetCode
                 int len = Math.Max(len1, len2);
                 if (len > end - start)
                 {
-                    start = i - (len - 1) / 2;
-                    end = i + len / 2;
+                    start = i - ((len - 1) / 2);
+                    end = i + (len / 2);
                 }
             }
-            return s.Substring(start, end + 1);
+            return s.Substring(start, end + 1 - start);
         }
 
         private static int expandAroundCenter(String s, int left, int right)
         {
+            if (s == null || left > right) return 0;
             int L = left, R = right;
 
             while (L >= 0 && R < s.Length && s[L] == s[R])
@@ -74,7 +75,7 @@ namespace AlgorithmCoderbyte.LeetCode
         {
 
 
-            Console.WriteLine(longestPalindrome_ExpandAroundTheCorner("babad"));
+            Console.WriteLine(longestPalindromeExpandAroundTheCorner("babad"));
             //Console.WriteLine(LongestPalindrome("abb"));
             //Console.WriteLine(LongestPalindrome("cbbd"));
             //Console.WriteLine(LongestPalindrome("ac"));
