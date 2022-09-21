@@ -17,7 +17,9 @@ namespace AlgorithmCoderbyte
             //_03LongestSubstringWithoutRepeatingCharacters.Run();
             //_04MedianOfTwoSortedArrays.Run();
             //_05LongestPalindromicSubstring.Run();
-            _06ZigZagConversion.Run();
+            //_06ZigZagConversion.Run();
+            //_07ReverseNumbers.Run();
+            _08StringToInteger.Run();
 
         }
     }

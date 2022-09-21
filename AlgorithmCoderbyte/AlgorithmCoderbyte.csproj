@@ -6,12 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Turing\08 Longest Substring.cs" />
+    <Compile Remove="Brackets and Parentheses\JavaScript version\**" />
+    <Compile Remove="Brackets and Parentheses\TypeScript version\**" />
+    <EmbeddedResource Remove="Brackets and Parentheses\JavaScript version\**" />
+    <EmbeddedResource Remove="Brackets and Parentheses\TypeScript version\**" />
+    <None Remove="Brackets and Parentheses\JavaScript version\**" />
+    <None Remove="Brackets and Parentheses\TypeScript version\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Brackets and Parentheses\JavaScript version\" />
-    <Folder Include="Brackets and Parentheses\TypeScript version\" />
+    <Compile Remove="Turing\08 Longest Substring.cs" />
   </ItemGroup>
 
   <ItemGroup>
