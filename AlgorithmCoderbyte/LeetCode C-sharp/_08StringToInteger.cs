@@ -10,9 +10,25 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
     {
         public static int MyAtoi(string s)
         {
+            int answer;
             string NumberString = "";
 
             s = s.Trim();
+            if (s.StartsWith("+-") || s.StartsWith("-+") || string.IsNullOrEmpty(s))
+            {
+                return answer = 0;
+            }
+            if (!char.IsDigit(s[1]) && (s.StartsWith("+") || s.StartsWith("-")))
+            {
+                return answer = 0;
+            }
+            s = s.Trim('+');
+
+            if (s.Contains('.'))
+            {
+                s = s.Remove(s.IndexOf('.'));
+            }
+
             for (int i = 0; i < s.Length; i++)
             {
                 if (i == 0 && (s[i] == '+' || s[i] == '-'))
@@ -30,34 +46,35 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
                     break;
                 }
             }
-            string numStr2 = NumberString;
-            numStr2 = numStr2.Trim('+');
-            numStr2 = numStr2.Trim('-');
-            int answer;
-            if(numStr2 > int.MaxValue.ToString())
+            if (NumberString == "-")
             {
-
+                return answer = 0;
             }
 
             if (string.IsNullOrEmpty(NumberString))
                 return answer = 0;
-            if (Convert.ToInt32(NumberString) > int.MaxValue)
+            if (Convert.ToDouble(NumberString) > int.MaxValue)
             {
                 answer = int.MaxValue;
             }
-            else if(Convert.ToInt32(NumberString) < int.MinValue){
+            else if (Convert.ToDouble(NumberString) < int.MinValue)
+            {
                 answer = int.MinValue;
             }
             else
             {
                 answer = Convert.ToInt32(NumberString);
             }
-            
+
             return answer;
         }
         public static void Run()
         {
-            Console.WriteLine(MyAtoi(" - 91283472332")); 
+            //Console.WriteLine(MyAtoi(" - 91283472332"));
+            //Console.WriteLine(MyAtoi("words and 987"));
+            //Console.WriteLine(MyAtoi("+-12"));
+            //Console.WriteLine(MyAtoi("-abc"));
+            Console.WriteLine(MyAtoi("1"));
         }
     }
 }
