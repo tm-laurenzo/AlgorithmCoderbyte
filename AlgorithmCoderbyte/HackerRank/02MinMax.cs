@@ -39,13 +39,13 @@ class Result
 
 }
 
-class Solution
-{
-    public static void Main(string[] args)
-    {
+//class Solution
+//{
+//    public static void Main(string[] args)
+//    {
 
-        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+//        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
 
-        Result.miniMaxSum(arr);
-    }
-}
+//        Result.miniMaxSum(arr);
+//    }
+//}
