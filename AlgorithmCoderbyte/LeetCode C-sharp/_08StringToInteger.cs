@@ -27,6 +27,7 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
             if (s.Contains('.'))
             {
                 s = s.Remove(s.IndexOf('.'));
+
             }
 
             for (int i = 0; i < s.Length; i++)
