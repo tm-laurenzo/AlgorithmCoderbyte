@@ -1,6 +1,8 @@
 ﻿function romanToInt(s: string): number {
     let total: number = 0;
+
     let cur: number = getNumber(s.charAt(0));
+
     for (let i = 1; i < s.length; i++) {
         let next = getNumber(s.charAt(i));
         if (cur < next) {
