@@ -8,6 +8,7 @@
         }
         else {
             total += cur;
+
         }
         cur = next;
     }
