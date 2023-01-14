@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlgorithmCoderbyte.LeetCode_C_sharp
 {
@@ -10,7 +6,6 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
     {
         public static int RomanToInt(string s)
         {
-            
 
             var current = GetNumber(s[0]);
             var total = 0;
@@ -30,7 +25,8 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
             total += current;
             return total;
         }
-        public static int  GetNumber(char ch)
+
+        public static int GetNumber(char ch)
         {
             switch (ch)
             {
@@ -44,6 +40,7 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
                 default: return 0;
             }
         }
+
         public static void Run()
         {
             Console.WriteLine(_0013RomanToInteger.RomanToInt("IV"));
