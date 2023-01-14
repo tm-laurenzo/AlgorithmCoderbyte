@@ -10,7 +10,7 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
     {
         public static int RomanToInt(string s)
         {
-            //var romNum = new int{I,V,X,L,C,D,M};
+            
 
             var current = GetNumber(s[0]);
             var total = 0;
