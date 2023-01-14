@@ -20,7 +20,6 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
                 if (current < next)
                 {
                     total -= current;
-
                 }
                 else
                 {
