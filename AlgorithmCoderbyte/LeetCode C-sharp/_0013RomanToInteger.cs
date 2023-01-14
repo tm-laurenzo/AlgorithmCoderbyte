@@ -25,7 +25,6 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
                 else
                 {
                     total += current;
-
                 }
                 current = next;
             }
