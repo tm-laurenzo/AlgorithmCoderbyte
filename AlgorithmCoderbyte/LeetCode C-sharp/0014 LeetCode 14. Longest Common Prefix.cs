@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmCoderbyte.LeetCode_C_sharp
 {
-    public static class C
+    public static class _0014_LeetCode_14
     {
         public static string LongestCommonPrefix(string[] strs)
         {
@@ -23,11 +23,9 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
         }
         public static void Run()
         {
-            //Console.WriteLine(MyAtoi(" - 91283472332"));
-            //Console.WriteLine(MyAtoi("words and 987"));
-            //Console.WriteLine(MyAtoi("+-12"));
-            //Console.WriteLine(MyAtoi("-abc"));
+
             Console.WriteLine(LongestCommonPrefix(new string[] { "flower", "flow", "flight" }));
+            Console.WriteLine(LongestCommonPrefix(new string[] { "dog", "racecar", "car" }));
         }
     }
 }
