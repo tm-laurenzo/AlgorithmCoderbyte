@@ -24,7 +24,7 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
         public static void Run()
         {
 
-            Console.WriteLine(LongestCommonPrefix(new string[] { "flower", "flow", "flight" }));
+            Console.WriteLine(LongestCommonPrefix(new string[] { "flower", "flow" , "flight" }));
             Console.WriteLine(LongestCommonPrefix(new string[] { "dog" , "racecar", "car" }));
         }
     }
