@@ -8,6 +8,21 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
 {
     public static class _0001TwoSum
     {
+        public static int[] TwoSum(int[] numbers, int target)
+        {
+            Dictionary<int, int> map = new Dictionary<int, int>();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                int x = numbers[i];
+                if (map.ContainsKey(target - x))
+                {
+                    return new int[] { map[target - x] + 1, i + 1 };
+                }
+                map[x] = i;
+            }
+            throw new ArgumentException("No two sum solution");
+        }
+
 
         public static int[] TwoSum(int[] nums, int target)
         {
@@ -30,7 +45,11 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
 
         public static void Run()
         {
-            Console.WriteLine(_0001TwoSum.TwoSum( new int[] { 2, 7, 11, 15 }, 9));
+            var ans = _0001TwoSum.TwoSum(new int[] { 2, 7, 11, 15 }, 9);
+            foreach (var item in ans)
+            {
+                Console.WriteLine(  item);
+            }
         }
 
     }

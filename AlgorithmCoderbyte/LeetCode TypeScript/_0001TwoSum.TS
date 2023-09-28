@@ -6,9 +6,12 @@
             if (nums[i] + nums[j] == target) {
                 ans.push(i);
                 ans.push(j);
-               
+               return ans;
             }
         }
     }
     return ans;
 };
+
+let ans: number[] = twoSum([3, 4, 5, 2], 7);
+ans.forEach(x => console.log(x) );

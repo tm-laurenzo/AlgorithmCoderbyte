@@ -22,4 +22,8 @@
     <None Include="Turing\08 Longest Substring.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="_LeetCode images\50CommonLeetCodeQuestions\" />
+  </ItemGroup>
+
 </Project>
