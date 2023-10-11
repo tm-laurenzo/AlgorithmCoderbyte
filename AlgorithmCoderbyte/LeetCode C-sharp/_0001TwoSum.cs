@@ -8,19 +8,30 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
 {
     public static class _0001TwoSum
     {
-        public static int[] TwoSum(int[] numbers, int target)
+        public static int[] TwoSumUsingDictionary(int[] nums, int target)
         {
-            Dictionary<int, int> map = new Dictionary<int, int>();
-            for (int i = 0; i < numbers.Length; i++)
+            // Create a hash table to store the seen elements.
+            var seen = new Dictionary<int, int>();
+
+            // Iterate over the array.
+            for (int i = 0; i < nums.Length; i++)
             {
-                int x = numbers[i];
-                if (map.ContainsKey(target - x))
+                // Calculate the complement of the current element.
+                int complement = target - nums[i];
+
+                // Check if the complement is in the hash table.
+                if (seen.ContainsKey(complement))
                 {
-                    return new int[] { map[target - x] + 1, i + 1 };
+                    // Return the indices of the two elements.
+                    return new int[] { i, seen[complement] };
                 }
-                map[x] = i;
+
+                // Add the current element to the hash table.
+                seen[nums[i]] = i;
             }
-            throw new ArgumentException("No two sum solution");
+
+            // If we reach this point, there is no solution to the problem.
+            return null;
         }
 
 
