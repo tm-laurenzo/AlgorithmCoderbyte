@@ -8,6 +8,13 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
 {
     public static class _0001TwoSum
     {
+
+        public static int[] TwoSumOofNsquared(int[] nums, int target)
+        {
+
+
+            return null;
+        }
         public static int[] TwoSumUsingDictionary(int[] nums, int target)
         {
             // Create a hash table to store the seen elements.
