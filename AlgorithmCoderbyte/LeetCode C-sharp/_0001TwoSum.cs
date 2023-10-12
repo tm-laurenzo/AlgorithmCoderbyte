@@ -56,7 +56,7 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
 
         public static void Run()
         {
-            var ans = _0001TwoSum.TwoSum(new int[] { 2, 7, 11, 15 }, 9);
+            var ans = _0001TwoSum.TwoSumUsingDictionary(new int[] { 2, 7, 11, 15 }, 9);
             foreach (var item in ans)
             {
                 Console.WriteLine(  item);
