@@ -15,9 +15,9 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
                     cleanInput2 += c;
                 }
             }
-            string cleanInput = s.Where(x => Char.IsLetterOrDigit(x)).ToString() + "";
-            Console.WriteLine(  cleanInput);
-            return cleanInput.ToLower().SequenceEqual(cleanInput.ToLower().Reverse());
+         
+            Console.WriteLine(  cleanInput2);
+            return cleanInput2.ToLower().SequenceEqual(cleanInput2.ToLower().Reverse());
         }
 
         public static void Run(string? input)
