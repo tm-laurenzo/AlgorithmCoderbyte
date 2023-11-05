@@ -9,7 +9,8 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
     public static class _0125ValidPalindrome
     {
         public static bool IsPalindrome(string s)
-        { string cleanInput2 = "";
+        { 
+            string cleanInput2 = "";
             foreach (char c in s) {
                 if (Char.IsLetterOrDigit(c)){
                     cleanInput2 += c;
