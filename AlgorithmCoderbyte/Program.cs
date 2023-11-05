@@ -10,7 +10,7 @@ namespace AlgorithmCoderbyte
         static void Main(string[] args)
         {
             //LongestWord.Run();
-            _0001TwoSum.Run();
+            //  _0001TwoSum.Run();
             // BracketCombination.Run();
             // RecursionFactorial.Run();
             // ValidParentheses.Run();
@@ -23,6 +23,7 @@ namespace AlgorithmCoderbyte
             //_08StringToInteger.Run();
             //_0013RomanToInteger.Run();
             //_0014_LeetCode_14.Run();
+            _0125ValidPalindrome.Run("A man, a plan, a canal: Panama");
 
         }
     }
