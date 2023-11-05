@@ -10,15 +10,15 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
     {
         public static bool IsPalindrome(string s)
         { 
-            string cleanInput2 = "";
+            StringBuilder cleanInput2 = new StringBuilder();
             foreach (char c in s) {
                 if (Char.IsLetterOrDigit(c)){
-                    cleanInput2 += c;
+                    cleanInput2 = cleanInput2.Append(c);
                 }
             }
          
             Console.WriteLine(  cleanInput2);
-            return cleanInput2.ToLower().SequenceEqual(cleanInput2.ToLower().Reverse());
+            return cleanInput2.ToString().ToLower().SequenceEqual(cleanInput2.ToString().ToLower().Reverse());
         }
 
         public static void Run(string? input)
