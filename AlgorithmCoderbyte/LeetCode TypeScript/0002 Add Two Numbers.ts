@@ -11,19 +11,19 @@
  */
 
 function addTwoNumbers(
-  l1: ListNode | null,
-  l2: ListNode | null
+    l1: ListNode | null,
+    l2: ListNode | null
 ): ListNode | any {
 
-  
+
 }
 
 
 class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
+    val: number;
+    next: ListNode | null;
+    constructor(val?: number, next?: ListNode | null) {
+        this.val = val === undefined ? 0 : val;
+        this.next = next === undefined ? null : next;
+    }
 }
