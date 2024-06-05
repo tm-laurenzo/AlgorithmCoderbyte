@@ -16,7 +16,7 @@ namespace AlgorithmCoderbyte.LeetCode_C_sharp
             {
                 while(strs[i].IndexOf(prefix) != 0)
                 {
-                    prefix = prefix.Substring(0, prefix.Length - 1);
+                    prefix = prefix.Substring(0,  prefix.Length - 1);
                 }
             }
             return prefix;
